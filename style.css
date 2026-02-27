@@ -1,0 +1,96 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background: radial-gradient(circle at bottom, #1b0033, #000000);
+}
+
+/* Moving Stars Background */
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.stars::before,
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveStars 60s linear infinite;
+}
+
+.stars::after {
+    background-size: 100px 100px;
+    animation-duration: 120s;
+    opacity: 0.5;
+}
+
+@keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-500px); }
+}
+
+/* Logo Section */
+.logo {
+    margin-top: 60px;
+}
+
+.logo-icon {
+    font-size: 60px;
+}
+
+.logo-text {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Card Design */
+.card {
+    background: white;
+    color: #333;
+    width: 350px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    width: 80%;
+    padding: 12px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #150627;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #6a1b9a;
+    transform: scale(1.05);
+}
